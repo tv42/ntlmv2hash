@@ -6,22 +6,22 @@
 //
 // Example interactive use
 //
-//     $ ntlmv2-hash
-//     foo	(user input)
-//     AC8E657F83DF82BEEA5D43BDAF7800CC	(program output)
-//     # copy-paste the output
-//     $ pdbedit --user jdoe --set-nt-hash AC8E657F83DF82BEEA5D43BDAF7800CC
+//	$ ntlmv2-hash
+//	foo	(user input)
+//	AC8E657F83DF82BEEA5D43BDAF7800CC	(program output)
+//	# copy-paste the output
+//	$ pdbedit --user jdoe --set-nt-hash AC8E657F83DF82BEEA5D43BDAF7800CC
 //
 // Using a password prompting helper
 //
-//     $  ssh-askpass 'New samba password' | ntlmv2-hash
+//	$  ssh-askpass 'New samba password' | ntlmv2-hash
 //
 // Example batch use
 //
-//     $ ntlmv2-hash <password >secret
-//     # transport secret to destination host
-//     $ read hash <secret
-//     $ pdbedit --user jdoe --set-nt-hash "$hash" --account-control '[]'
+//	$ ntlmv2-hash <password >secret
+//	# transport secret to destination host
+//	$ read hash <secret
+//	$ pdbedit --user jdoe --set-nt-hash "$hash" --account-control '[]'
 package main
 
 import (
